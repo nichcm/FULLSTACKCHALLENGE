@@ -1,2 +1,37 @@
 {{page-title "Vehicles"}}
-<h3 style="text-align:center">Insira aqui sua Lista de Veículos</h3>
+<main class="container mt-5">
+    <h1>Rotas de veiculos</h1>
+    <ul class="nav nav-tabs mt-3">
+        <li class="nav-item">
+            <a class="nav-link">
+                <LinkTo @route='index'>Home</LinkTo>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active">
+                lista de todos veiculos
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link">
+                <LinkTo @route='inserir'>Inserir veiculo</LinkTo>
+            </a>
+        </li>
+    </ul>
+<div class="lista_veiculos">
+    {{#each veiculos as |veiculo|}}
+    <div class="mt-5 listaVeiculos" >
+        <div >
+            <p>tipo: {{veiculo.tipo}}</p>
+            <p>Placa: {{veiculo.placa}}</p>
+            <p>modelo/Versao: {{veiculo.modeloVersao}}</p>
+            <p>ano: {{veiculo.ano}}</p>
+        </div>
+        <button  {{action 'deleteVeiculo'}}>deletar veiculo</button>
+        <button  {{action 'editarVeiculo'}}>editar veiculo</button>
+    </div>
+        
+    {{/each}}
+</div>
+</main>
+

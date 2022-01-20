@@ -8,4 +8,6 @@ export default class Router extends EmberRouter {
 
 Router.map(function () {
   this.route('vehicles');
+  this.route('inserir');
+  this.route('not-found', {path: '/*path'});
 });

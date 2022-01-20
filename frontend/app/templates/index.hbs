@@ -1,0 +1,24 @@
+{{page-title "Index"}}
+
+<main class="container mt-5">
+    <h1>Rotas de veiculos</h1>
+    <ul class="nav nav-tabs mt-3">
+        <li class="nav-item">
+            <a class="nav-link active">
+                Home
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link">
+                <LinkTo @route='vehicles'>Lista de todos veiculos</LinkTo>
+            </a>
+        </li>
+        
+        <li class="nav-item">
+            <a class="nav-link" href="#">
+                <LinkTo @route='inserir'>Inserir veiculo</LinkTo>
+            </a>
+        </li>
+    </ul>
+</main>
+{{outlet}}

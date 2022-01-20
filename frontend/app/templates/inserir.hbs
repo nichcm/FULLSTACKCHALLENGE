@@ -1,0 +1,52 @@
+{{page-title "Inserir"}}
+
+<main class="container mt-5">
+    <h1>Rotas de veiculos</h1>
+    <ul class="nav nav-tabs mt-3">
+        <li class="nav-item">
+            <a class="nav-link">
+                <LinkTo @route='index'>Home</LinkTo>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link ">
+                <LinkTo @route='vehicles'>lista de todos veiculos</LinkTo>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active">
+                Inserir veiculo
+            </a>
+        </li>
+    </ul>
+
+    <h5 class="mt-5">Para inserir inveiculo, por favor selecione as opções:</h5>
+    <div class="input-group mt-5">
+        
+        
+        <div class="input-group-prepend">
+            <label class="input-group-text" for="inputGroupSelect01">Tipo</label>
+        </div>
+        <select class="custom-select ember-select" value={{tipoVeiculo}}>
+            <option value="carro">Carro</option>
+            <option value="caminhao">Caminhão</option>
+            <option value="moto">Moto</option>
+        </select>
+    </div>
+
+
+    <div class="input-group mt-3">
+        <div class="input-group-prepend">
+            <label class="input-group-text" for="inputGroupSelect01">modelo</label>
+        </div>
+        <select class="custom-select" id="inputGroupSelect01">
+            {{#each modelos as |modelos|}}
+                <option value="modelo">{{modelos.nome}}</option>
+            {{/each}}
+        </select>
+    </div>
+
+    <button type="button" class="btn btn-primary mt-3">Cadastrar</button>
+</main>
+    
+{{outlet}}
